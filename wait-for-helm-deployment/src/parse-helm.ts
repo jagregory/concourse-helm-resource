@@ -63,6 +63,8 @@ function parseResource(type: string, columns: string[]): Resource {
         volume: columns[2],
         isReady: columns[1] === 'Bound'
       }
+    
+    case 'extensions/v1beta1/Deployment':
     case 'extensions/Deployment':
       //NAME        DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
       return {
